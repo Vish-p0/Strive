@@ -1,10 +1,7 @@
 package com.example.strive.activities
 
 import android.app.Activity
-import android.content.In        // HABIT rows
-        repo.getAllHabits().forEach { h ->
-            w.appendLine("HABIT,${h.id},${h.title},${h.emoji},${h.targetPerDay},${h.unit},${h.isBuiltIn},${h.color},${h.isStarred}")
-        }t
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import com.example.strive.repo.StriveRepository
@@ -94,7 +91,7 @@ object BackupRestoreHelper {
                 }
                 // Habits
                 repo.getAllHabits().forEach { h ->
-                    w.appendLine("HABIT,${h.id},${h.title},${h.emoji},${h.targetPerDay},${h.unit},${h.isBuiltIn}")
+                    w.appendLine("HABIT,${h.id},${h.title},${h.emoji},${h.targetPerDay},${h.unit},${h.isBuiltIn},${h.color},${h.isStarred}")
                 }
                 // Ticks
                 repo.getAllHabits().forEach { h ->
