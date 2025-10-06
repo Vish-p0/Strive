@@ -1,3 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Strive</string>
+    
+    <!-- Activity Titles -->
+    <string name="home_title">Strive</string>
+    <string name="habits_title">My Habits</string>
+    <string name="mood_title">Mood Journal</string>
+    <string name="profile_title">My Profile</string>
+    <string name="settings_title">Settings</string>
+    <string name="add_habit_title">Add Habit</string>
+    <string name="edit_habit_title">Edit Habit</string>
+    <string name="habit_detail_title">Habit Details</string>
+    <string name="onboarding_title">Welcome to Strive</string>
+    <string name="signup_title">Setup Profile</string>
+    <string name="widget_config_title">Widget Configuration</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_habits">Habit</string>
+    <string name="nav_mood">Mood</string>
+    <string name="nav_profile">Profile</string>
+    
+    <!-- Home Screen -->
+    <string name="greeting_morning">Good morning, %s</string>
+    <string name="greeting_afternoon">Good afternoon, %s</string>
+    <string name="greeting_evening">Good evening, %s</string>
+    <string name="greeting_night">Good night, %s</string>
+    <string name="habits_progress" formatted="false">%d / %d</string>
+    <string name="water_amount" formatted="false">%d mL / %d mL</string>
+    <string name="steps_amount" formatted="false">%,d / %,d</string>
+    <string name="upcoming_reminders">Upcoming Reminders</string>
+    <string name="no_upcoming_reminders">No upcoming reminders</string>
+    <string name="todays_habits">Today\'s Habits</string>
+    
+    <!-- Habits -->
+    <string name="search_habits">Search habits...</string>
+    <string name="filter_all">All</string>
+    <string name="filter_default">Default</string>
+    <string name="filter_custom">Custom</string>
+    <string name="filter_favorites">Favorites</string>
+    <string name="habit_title">Habit Title</string>
+    <string name="habit_unit">Unit</string>
+    <string name="habit_target">Daily Target</string>
+    <string name="habit_increment">Default Increment</string>
+    <string name="pick_emoji">Pick Emoji</string>
+    <string name="reminder_times">Reminder Times</string>
+    <string name="add_reminder">Add Reminder</string>
+    <string name="enabled">Enabled</string>
+    <string name="save_habit">Save Habit</string>
+    <string name="delete_habit">Delete Habit</string>
+    <string name="edit_habit">Edit Habit</string>
+    
+    <!-- Units -->
+    <string name="unit_count">Count</string>
+    <string name="unit_ml">mL</string>
+    <string name="unit_liters">Liters</string>
+    <string name="unit_minutes">Minutes</string>
+    <string name="unit_steps">Steps</string>
+    
+    <!-- Mood -->
+    <string name="add_mood">Add Mood</string>
+    <string name="mood_note">Add a note (optional)</string>
+    <string name="save_mood">Save Mood</string>
+    <string name="share_mood">Share Mood Summary</string>
+    <string name="last_mood">Last mood: %s</string>
+    <string name="mood_banner_title">Latest mood</string>
+    <string name="mood_banner_empty_title">How are you feeling?</string>
+    <string name="mood_banner_empty_message">Set the tone for your day by logging a mood.</string>
+    <string name="mood_banner_empty_status">No mood logged yet</string>
+    <string name="mood_banner_empty_cta">Tap add mood to check in</string>
+    <string name="mood_banner_label_format">Feeling %1$s</string>
+    <string name="mood_banner_last_logged">Logged %1$s</string>
+    <string name="mood_quote_positive_one">You\'re glowing—keep sharing that energy.</string>
+    <string name="mood_quote_positive_two">Bottle this momentum and pour it into one more habit today.</string>
+    <string name="mood_quote_positive_three">Lean into that joy—it\'s contagious.</string>
+    <string name="mood_quote_neutral_one">You\'re steady today—nudge one small habit forward.</string>
+    <string name="mood_quote_neutral_two">Neutral is a blank canvas—add a splash you enjoy.</string>
+    <string name="mood_quote_neutral_three">Take a mindful breath and check what would feel good next.</string>
+    <string name="mood_quote_low_one">Be gentle with yourself—slow steps still count.</string>
+    <string name="mood_quote_low_two">Small comforts—water, rest, or a song—can lift the fog.</string>
+    <string name="mood_quote_low_three">Reach out if you need a boost; you\'re not alone.</string>
+    <string name="mood_quote_lower_one">It\'s okay to feel this way—today is just one chapter.</string>
+    <string name="mood_quote_lower_two">Offer yourself kindness first—progress can wait.</string>
+    <string name="mood_quote_lower_three">Start with one deep breath—the next step will follow.</string>
+
+    <string name="habits_empty_message">Log a habit today to start filling the ring.</string>
+    <string name="daily_progress_message_start">Your streak starts with one tap—let\'s begin.</string>
+    <string name="daily_progress_message_keep_going">Nice work—keep moving through your list.</string>
+    <string name="daily_progress_message_almost">So close—finish strong!</string>
+    <string name="daily_progress_message_complete">All done for today—amazing!</string>
+    
+    <!-- Profile -->
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="avatar_emoji">Avatar</string>
+    <string name="edit_profile">Edit Profile</string>
+        <string name="avatar_emoji_char">🫣</string>
+    <string name="backup_data">Backup Data</string>
+    <string name="restore_data">Restore Data</string>
+    <string name="delete_all_data">Delete All Data</string>
+    <string name="logout">Logout</string>
+    <string name="goals">Goals</string>
+    <string name="edit_goals">Edit Goals</string>
+    
+    <!-- Settings -->
+    <string name="step_sensor">Step Sensor</string>
+    <string name="step_sensor_summary">Use device step sensor if available</string>
+    <string name="hydration_notifications">Hydration Reminders</string>
+    <string name="theme">Theme</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="export_data">Export Data</string>
+    <string name="import_data">Import Data</string>
+    <string name="reset_data">Reset Data</string>
+    
+    <!-- Timeline -->
+    <string name="timeline_day">Day</string>
+    <string name="timeline_week">Week</string>
+    <string name="timeline_month">Month</string>
+    <string name="timeline_90d">90 Days</string>
+    <string name="timeline_custom">Custom</string>
+    
+    <!-- Buttons and Actions -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="add">Add</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="get_started">Get Started</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="done">Done</string>
+    <string name="close">Close</string>
+    <string name="ok">OK</string>
+    <string name="delete_data_title">Delete all data?</string>
+    <string name="delete_data_message">This removes all habits, moods, and settings stored on this device. Backups saved in Downloads stay safe.</string>
+    <string name="delete_data_success">All app data has been cleared. You can restore from your backup in Downloads whenever you like.</string>
+
+        <!-- Generic formatting -->
+        <string name="percent_format" formatted="false">%d%%</string>
+        <string name="value_unit">%1$d %2$s</string>
+
+        <!-- Habit states and labels -->
+        <string name="built_in_habit">Built-in habit</string>
+        <string name="custom_habit">Custom habit</string>
+        <string name="none">None</string>
+
+        <!-- Meditation timer -->
+        <string name="meditation_complete_title">Meditation Complete!</string>
+        <string name="meditation_complete_msg">Great job! You completed a %1$d minute meditation session.</string>
+        <string name="log_partial_title">Log Partial Session</string>
+        <string name="log_partial_msg">You meditated for %1$d minutes. Would you like to log this?</string>
+        <string name="log_it">Log It</string>
+        <string name="discard">Discard</string>
+        <string name="manual_entry_title">Manual Entry</string>
+        <string name="manual_entry_hint">Enter amount</string>
+        <string name="manual_entry_msg">Enter %1$s to add:</string>
+        <string name="start_text">Start</string>
+        <string name="pause">Pause</string>
+        <string name="resume">Resume</string>
+    
+    <!-- Content Descriptions -->
+    <string name="cd_add_water">Add water</string>
+    <string name="cd_add_steps">Add steps</string>
+    <string name="cd_habit_emoji">Habit emoji</string>
+    <string name="cd_avatar_emoji">Avatar emoji</string>
+    <string name="cd_add_habit">Add new habit</string>
+    <string name="cd_add_mood">Add mood entry</string>
+    <string name="cd_habit_plus">Increase habit</string>
+    <string name="cd_habit_minus">Decrease habit</string>
+    <string name="cd_edit_habit">Edit habit</string>
+    <string name="cd_delete_habit">Delete habit</string>
+    
+    <!-- Validation Messages -->
+    <string name="error_required_field">This field is required</string>
+    <string name="error_invalid_age">Please enter a valid age</string>
+    <string name="error_invalid_target">Target must be greater than 0</string>
+    <string name="error_invalid_increment">Increment must be greater than 0</string>
+    
+    <!-- Confirmation Messages -->
+    <string name="confirm_delete_habit">Are you sure you want to delete this habit?</string>
+    <string name="confirm_delete_all_data">Are you sure you want to delete all data? This cannot be undone.</string>
+    <string name="confirm_import_replace">Replace all current data with imported data?</string>
+    <string name="confirm_import_merge">Merge imported data with current data?</string>
+    
+    <!-- Success Messages -->
+    <string name="data_exported_successfully">Data exported successfully</string>
+    <string name="data_imported_successfully">Data imported successfully</string>
+    <string name="habit_saved_successfully">Habit saved successfully</string>
+    <string name="mood_saved_successfully">Mood saved successfully</string>
+    
+    <!-- Gender Options -->
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="gender_other">Other</string>
+    <string name="gender_prefer_not_to_say">Prefer not to say</string>
+    
+    <!-- Onboarding -->
+    <string name="onboarding_page1_title">Track Your Wellness</string>
+    <string name="onboarding_page1_desc">Monitor your daily habits like water intake, meditation, and steps</string>
+    <string name="onboarding_page2_title">Mood Journaling</string>
+    <string name="onboarding_page2_desc">Log your daily emotions with emojis and optional notes</string>
+    <string name="onboarding_page3_title">Smart Reminders</string>
+    <string name="onboarding_page3_desc">Get timely notifications to help you stay on track</string>
+    
+    <!-- Widget -->
+    <string name="widget_single_habit">Single Habit</string>
+    <string name="widget_two_habits">Two Habits</string>
+    <string name="widget_config_description">Choose which habits to display in your widget</string>
+
+    <!-- Mood Journal -->
+    <string name="mood_logged_format">%1$s logged</string>
+    <string name="undo">Undo</string>
+    <string name="tap_emoji_hint">Tap an emoji above to quick-log. Note auto-filled with emoji name.</string>
+    <string name="quick_mood_log">Quick Log</string>
+    <string name="recent_moods">Recent Moods</string>
+    <string name="note_hint">How are you feeling? (Optional)</string>
+    <string name="edit_mood">Edit Mood</string>
+    <string name="timestamp">Timestamp</string>
+    <string name="emoji_required">Emoji is required</string>
+    <string name="single_emoji_only">Single emoji only</string>
+    <string name="mood_deleted">Mood deleted</string>
+    <string name="confirm_delete_mood">Are you sure you want to delete this mood entry?</string>
+    <string name="mood_subtitle">Track your daily emotions and feelings</string>
+
+    <!-- Misc app strings extracted from hardcoded usages -->
+    <string name="app_title_pulse">Strive</string>
+    <string name="widget_no_habit">No habit configured</string>
+    <string name="widget_title">Strive Widget</string>
+    <string name="default_user">User</string>
+    <string name="no_mood_entries">No mood entries yet</string>
+    <string name="habit_deleted">Habit deleted</string>
+    <string name="edit_habit_tag">edit_habit</string>
+    <string name="pulse">Strive</string>
+    <string name="no_habit_configured">No habit configured</string>
+    <string name="decrease">Decrease</string>
+    <string name="increase">Increase</string>
+    <string name="let_s_add_how_you_re_feeling_today">Let\'s add how you\'re \nfeeling today</string>
+    <string name="add_moods">Add mood</string>
+    <string name="setup_profile">Setup Profile</string>
+    <string name="increase2">Increase</string>
+    <string name="decrease2">Decrease</string>
+    <string name="keep_it_up">Keep it up!</string>
+    <string name="_2_5">2/5</string>
+    <string name="daily_progress">Daily Progress</string>
+    <string name="restore_from_backup">Or Restore from backup</string>
+    <string name="increasew">Increase</string>
+    <string name="_6_8_cups">6 / 8 cups</string>
+    <string name="waters">Water</string>
 </resources>

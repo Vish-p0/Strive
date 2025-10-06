@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Signup/Profile Setup Screen -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background5"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_xl"
+        android:gravity="center">
+
+
+        <!-- White Card Container -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_md"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/card_corner"
+            app:cardElevation="@dimen/card_elevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_xl"
+                android:gravity="center">
+
+                <!-- Setup Profile Title -->
+                <TextView
+                    android:id="@+id/tvSetupProfile"
+                    style="@style/Strive.Text.Subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_lg"
+                    android:text="@string/setup_profile"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <!-- Avatar Emoji -->
+                <TextView
+                    android:id="@+id/tvAvatarEmoji"
+                    android:layout_width="@dimen/avatar_size"
+                    android:layout_height="@dimen/avatar_size"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/spacing_sm"
+                    android:background="@drawable/bg_bottom_nav"
+                    android:gravity="center"
+                    android:text="@string/avatar_emoji_char"
+                    android:textSize="@dimen/emoji_text_size"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="@string/cd_avatar_emoji" />
+
+                <!-- Emoji Input Field -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilEmoji"
+                    style="@style/Strive.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_lg"
+                    android:hint="Avatar Emoji"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmojiInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="😃"
+                        android:textSize="24sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Name Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilName"
+                    style="@style/Strive.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:maxLength="50" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Age Input -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAge"
+                    style="@style/Strive.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/age"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:digits="0123456789"
+                        android:maxLength="3" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Gender Spinner -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilGender"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/gender"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/spGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- Sign Up Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSignup"
+                    style="@style/Strive.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xl"
+                    android:text="@string/sign_up" />
+
+                <!-- Restore from backup text -->
+                <TextView
+                    android:id="@+id/tvRestoreBackup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_md"
+                    android:text="@string/restore_from_backup"
+                    android:textColor="@color/primary"
+                    android:textSize="14sp"
+                    android:gravity="end"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?android:attr/selectableItemBackground" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

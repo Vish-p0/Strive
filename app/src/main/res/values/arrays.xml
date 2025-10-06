@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mood_emojis">
+        <item>😄</item>
+        <item>😊</item>
+        <item>😐</item>
+        <item>😢</item>
+        <item>😠</item>
+        <item>😍</item>
+        <item>🤗</item>
+        <item>😴</item>
+        <item>🤔</item>
+        <item>😨</item>
+        <item>🥳</item>
+        <item>😔</item>
+        <item>😤</item>
+        <item>🙄</item>
+        <item>😇</item>
+        <item>🤯</item>
+        <item>😎</item>
+        <item>🥺</item>
+        <item>😋</item>
+        <item>🤗</item>
+    </string-array>
+    
+    <string-array name="gender_options">
+        <item>@string/gender_male</item>
+        <item>@string/gender_female</item>
+        <item>@string/gender_other</item>
+        <item>@string/gender_prefer_not_to_say</item>
+    </string-array>
+    
+    <string-array name="unit_options">
+        <item>@string/unit_count</item>
+        <item>@string/unit_ml</item>
+        <item>@string/unit_liters</item>
+        <item>@string/unit_minutes</item>
+        <item>@string/unit_steps</item>
+    </string-array>
+    
+    <string-array name="theme_options">
+        <item>@string/theme_system</item>
+        <item>@string/theme_light</item>
+        <item>@string/theme_dark</item>
+    </string-array>
+</resources>

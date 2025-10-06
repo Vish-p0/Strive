@@ -1,7 +1,31 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme (dark mode) -->
     <style name="Base.Theme.Strive" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Primary colors (dark) -->
+        <item name="colorPrimary">#ca5cdd</item>
+        <item name="colorOnPrimary">#000000</item>
+
+        <!-- Secondary colors (dark) -->
+        <item name="colorSecondary">#be2ed6</item>
+        <item name="colorOnSecondary">#000000</item>
+
+        <!-- Background colors (dark) -->
+        <item name="android:colorBackground">@color/dark_background</item>
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="colorOnBackground">@color/dark_textPrimary</item>
+        <item name="colorOnSurface">@color/dark_textPrimary</item>
+
+        <!-- Error colors -->
+        <item name="colorError">#CF6679</item>
+        <item name="colorOnError">#000000</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/dark_surface</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- Remove default app bar/title -->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 </resources>

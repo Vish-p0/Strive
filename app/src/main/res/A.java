@@ -1,0 +1,1 @@
+ERROR: /Users/vishwaperera/AndroidStudioProjects/Pulse/app/src/main/res/layout/activity_home.xml:320: AAPT: error: resource style/Widget.Material3.Button.Filled (aka com.example.pulse:style/Widget.Material3.Button.Filled) not found.

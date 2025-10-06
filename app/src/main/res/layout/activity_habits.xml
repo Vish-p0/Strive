@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Habits List Screen -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebe4ef">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_lg"
+        android:layout_marginBottom="@dimen/bottom_nav_height">
+
+        <!-- Page Title (fixed) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/habits_title"
+            android:textSize="30sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="@dimen/spacing_md" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:overScrollMode="ifContentScrolls">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Daily Progress Ring Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardDailyProgress"
+                    style="@style/Strive.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_lg">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/card_padding"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.progressindicator.CircularProgressIndicator
+                            android:id="@+id/progressDaily"
+                            style="@style/Widget.Material3.CircularProgressIndicator.Medium"
+                            android:layout_width="88dp"
+                            android:layout_height="88dp"
+                            android:indeterminate="false"
+                            app:indicatorColor="@color/progressForeground"
+                            app:trackColor="@color/progressBackground"
+                            app:trackThickness="8dp"
+                            app:indicatorInset="8dp"
+                            app:indicatorDirectionCircular="clockwise" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="@dimen/spacing_lg"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvDailyProgressPercent"
+                                style="@style/Strive.Text.Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0%"
+                                android:textSize="26sp" />
+
+                            <TextView
+                                android:id="@+id/tvDailyProgressMessage"
+                                style="@style/Strive.Text.Body"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/keep_it_up"
+                                android:layout_marginTop="4dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Today's Progress Pie Chart -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardPieChart"
+                    style="@style/Strive.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_lg">
+
+                    <com.example.strive.views.HabitPieChartView
+                        android:id="@+id/pieChartHabits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/card_padding" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Search -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSearch"
+                    style="@style/Strive.TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/search_habits"
+                    app:startIconDrawable="@android:drawable/ic_menu_search">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSearchHabits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Filter Chips -->
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupHabitFilters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_lg"
+                    app:singleSelection="true"
+                    app:selectionRequired="true">
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Strive.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/filter_all"
+                        android:checked="true" />
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Strive.Chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/filter_favorites" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <!-- Habits List -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHabits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_lg"
+                    android:overScrollMode="never"
+                    android:nestedScrollingEnabled="false" />
+
+                <!-- Bottom spacer for nav overlap -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_lg" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <!-- FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddHabit"
+        style="@style/Strive.FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="@dimen/fab_margin_bottom"
+        android:layout_marginEnd="@dimen/fab_margin_end"
+        android:contentDescription="@string/cd_add_habit"
+        app:layout_behavior="com.example.strive.widgets.NoMoveFabBehavior"
+        app:srcCompat="@drawable/ic_add" />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        style="@style/Strive.BottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_nav_height"
+        android:layout_gravity="bottom"
+        app:menu="@menu/menu_bottom_nav" />
+
+    <!-- Confetti Overlay -->
+    <FrameLayout
+        android:id="@+id/confettiOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:focusable="false" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

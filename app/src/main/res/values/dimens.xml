@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Card Properties -->
+    <dimen name="card_corner">18dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="card_margin">12dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    
+    <!-- Spacing -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">12dp</dimen>
+    <dimen name="spacing_lg">16dp</dimen>
+    <dimen name="spacing_xl">24dp</dimen>
+    <dimen name="spacing_xxl">32dp</dimen>
+    
+    <!-- Text Sizes -->
+    <dimen name="text_size_large_title">24sp</dimen>
+    <dimen name="text_size_title">20sp</dimen>
+    <dimen name="text_size_subtitle">16sp</dimen>
+    <dimen name="text_size_body">14sp</dimen>
+    <dimen name="text_size_caption">12sp</dimen>
+    
+    <!-- Button and Touch Targets -->
+    <dimen name="touch_target_min">48dp</dimen>
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    
+    <!-- Bottom Navigation -->
+    <dimen name="bottom_nav_height">72dp</dimen>
+    <dimen name="bottom_nav_margin">16dp</dimen>
+    <dimen name="bottom_nav_corner">18dp</dimen>
+    
+    <!-- Navigation Rail -->
+    <dimen name="nav_rail_width">72dp</dimen>
+    
+    <!-- Icon Sizes -->
+    <dimen name="icon_size_small">18dp</dimen>
+    <dimen name="icon_size_medium">24dp</dimen>
+    <dimen name="icon_size_large">32dp</dimen>
+    <dimen name="icon_size_xl">48dp</dimen>
+    
+    <!-- Avatar and Emoji -->
+    <dimen name="avatar_size">64dp</dimen>
+    <dimen name="emoji_size">32dp</dimen>
+    <dimen name="emoji_text_size">32sp</dimen>
+    
+    <!-- Progress Views -->
+    <dimen name="progress_size">48dp</dimen>
+    <dimen name="progress_stroke_width">4dp</dimen>
+    
+    <!-- Input Fields -->
+    <dimen name="input_height">56dp</dimen>
+    <dimen name="input_margin">4dp</dimen>
+    <dimen name="input_height_large">64dp</dimen>
+    <dimen name="text_size_input_large">18sp</dimen>
+    
+    <!-- Charts -->
+    <dimen name="chart_height">200dp</dimen>
+    <dimen name="chart_margin">16dp</dimen>
+    
+    <!-- Widget -->
+    <dimen name="widget_padding">8dp</dimen>
+    <dimen name="widget_corner">12dp</dimen>
+    
+    <!-- List Items -->
+    <dimen name="list_item_height">72dp</dimen>
+    <dimen name="list_item_padding">16dp</dimen>
+    
+    <!-- Mood History -->
+    <dimen name="mood_history_height">240dp</dimen>
+    
+    <!-- FAB -->
+    <dimen name="fab_margin_bottom">160dp</dimen>
+    <dimen name="fab_margin_end">16dp</dimen>
+    <dimen name="fab_offset_above_nav">32dp</dimen>
+    
+    <!-- Toolbar -->
+    <dimen name="toolbar_height">56dp</dimen>
+</resources>

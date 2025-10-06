@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Habit row item layout -->
+<com.google.android.material.card.MaterialCardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Strive.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_sm"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:orientation="horizontal"
+        android:padding="@dimen/list_item_padding"
+        android:gravity="center_vertical">
+
+        <!-- Emoji -->
+        <TextView
+            android:id="@+id/ivHabitEmoji"
+            android:layout_width="@dimen/emoji_size"
+            android:layout_height="@dimen/emoji_size"
+            android:layout_marginEnd="@dimen/spacing_lg"
+            android:gravity="center"
+            android:text="💧"
+            android:textSize="@dimen/emoji_size"
+            android:contentDescription="@string/cd_habit_emoji" />
+
+        <!-- Text Content -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvHabitTitle"
+                style="@style/Strive.Text.Subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drink Water" />
+
+            <TextView
+                android:id="@+id/tvTodayProgress"
+                style="@style/Strive.Text.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="750 / 2000 mL" />
+
+            <ProgressBar
+                android:id="@+id/progressBarHabit"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="@dimen/spacing_xs"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="37" />
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHabitMinus"
+                style="@style/Widget.Material3.Button.IconButton.Outlined"
+                android:layout_width="@dimen/touch_target_min"
+                android:layout_height="@dimen/touch_target_min"
+                android:layout_marginEnd="@dimen/spacing_xs"
+                android:contentDescription="@string/cd_habit_minus"
+                app:icon="@drawable/ic_add"
+                app:iconTint="@color/textSecondary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHabitPlus"
+                style="@style/Widget.Material3.Button.IconButton.Filled"
+                android:layout_width="@dimen/touch_target_min"
+                android:layout_height="@dimen/touch_target_min"
+                android:contentDescription="@string/cd_habit_plus"
+                app:icon="@drawable/ic_add" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

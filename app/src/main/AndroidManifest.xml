@@ -2,6 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
+    <!-- Notification permission for Android 13+ -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Exact alarm permissions for Android 12+ -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <!-- Some Android versions/devices reference this alternative exact alarm permission -->
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,14 +24,87 @@
         android:theme="@style/Theme.Strive"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Strive">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Strive" />
+
+        <activity
+            android:name=".activities.OnboardingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Strive" />
+
+        <activity
+            android:name=".widgets.WidgetConfigActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Strive" />
+
+        <!-- App screens -->
+        <activity
+            android:name=".activities.HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Strive" />
+        <activity
+            android:name=".activities.SignupActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Strive" />
+        <activity
+            android:name=".activities.HabitsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Strive" />
+        <activity
+            android:name=".activities.HabitDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Strive" />
+        <activity
+            android:name=".activities.MoodActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Strive" />
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Strive" />
+        <activity
+            android:name=".activities.EditProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Strive" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Strive" />
+        <activity
+            android:name=".activities.AddMoodActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Strive" />
+
+        <!-- Receivers & Services -->
+    <receiver android:name="com.example.strive.receivers.StriveReminderReceiver" android:exported="false" />
+
+        <receiver android:name="com.example.strive.receivers.StriveBootReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.example.strive.widgets.StriveWidgetProvider" android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/strive_widget_info" />
+        </receiver>
+
+        <service android:name="com.example.strive.sensors.StriveStepService" android:exported="false" />
     </application>
 
 </manifest>

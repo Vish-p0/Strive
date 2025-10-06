@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primary"
+    android:padding="8dp">
+
+    <!-- First Card: Overall Progress with Cheer Message -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ebe4ef"
+        android:padding="20dp"
+        android:layout_marginBottom="8dp">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <!-- Icon Circle -->
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="🎯"
+                android:textSize="28sp"
+                android:gravity="center"
+                android:background="@drawable/bg_bottom_nav"
+                android:layout_marginEnd="12dp" />
+
+            <!-- Title and Subtitle -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Progress"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvWidgetCheerMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keep_it_up"
+                    android:textColor="#666666"
+                    android:textSize="13sp"
+                    android:layout_marginTop="2dp" />
+
+            </LinearLayout>
+
+            <!-- Progress Count Badge -->
+            <TextView
+                android:id="@+id/tvWidgetProgressCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_2_5"
+                android:textColor="#9C27B0"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:background="@drawable/bg_bottom_nav" />
+
+        </LinearLayout>
+
+        <!-- Progress Bar with rounded corners -->
+        <ProgressBar
+            android:id="@+id/progressBarWidget"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:progress="40"
+            android:max="100"
+            android:progressTint="#9C27B0"
+            android:progressBackgroundTint="#E0E0E0" />
+
+    </LinearLayout>
+
+    <!-- Second Card: Selected Habit Details -->
+    <LinearLayout
+        android:id="@+id/layoutSelectedHabitCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ebe4ef"
+        android:padding="20dp"
+        android:visibility="visible">
+
+        <!-- Habit Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvWidgetHabitEmoji"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="💧"
+                android:textSize="28sp"
+                android:gravity="center"
+                android:background="@drawable/bg_bottom_nav"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvWidgetHabitTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/waters"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvWidgetHabitProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_6_8_cups"
+                    android:textColor="#666666"
+                    android:textSize="13sp"
+                    android:layout_marginTop="2dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Habit Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBarHabit"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:progress="75"
+            android:max="100"
+            android:progressTint="#9C27B0"
+            android:progressBackgroundTint="#E0E0E0"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Control Buttons -->
+        <LinearLayout
+            android:id="@+id/layoutHabitControls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Plus Button with modern design -->
+            <LinearLayout
+                android:id="@+id/btnWidgetPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/bg_bottom_nav">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#9C27B0"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Progress"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#9C27B0" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

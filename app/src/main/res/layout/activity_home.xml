@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Home Dashboard: greeting, cards, today list, bottom nav -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebe4ef">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/bottom_nav_height">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_lg">
+
+            <!-- Greeting -->
+            <TextView
+                android:id="@+id/tvGreeting"
+                style="@style/Strive.Text.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_lg"
+                android:layout_marginStart="@dimen/spacing_lg"
+                android:layout_marginBottom="@dimen/spacing_md"
+                android:text="Good morning, User" />
+
+            
+
+            <!-- Cards Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Habits Progress Card -->
+                <TextView
+                    android:id="@+id/tvTodaysProgressTitle"
+                    style="@style/Strive.Text.Subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_lg"
+                    android:layout_marginBottom="@dimen/spacing_md"
+                    android:text="Today's Progress"
+                    android:textSize="22sp" />
+
+                <!-- Cheering message moved below the title -->
+                <TextView
+                    android:id="@+id/tvProgressMessage"
+                    style="@style/Strive.Text.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_sm"
+                    android:text="Let's complete all the habits today"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardHabitsProgress"
+                    style="@style/Strive.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/card_padding"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvHabitsProgress"
+                                style="@style/Strive.Text.Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2 / 4"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/tvProgressPercent"
+                                style="@style/Strive.Text.Body"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0% complete"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvTasksCompleted"
+                                style="@style/Strive.Text.Caption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0 out of 0 habits completed"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <ProgressBar
+                            android:id="@+id/progressRingHabits"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/progress_size"
+                            android:layout_height="@dimen/progress_size"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progress="50" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Favorite Habits Card (Tall Scrollable) -->
+                <TextView
+                    style="@style/Strive.Text.Subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_lg"
+                    android:layout_marginBottom="@dimen/spacing_md"
+                    android:text="Favorites"
+                    android:textSize="22sp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardFavoriteHabits"
+                    style="@style/Strive.Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:clickable="false"
+                    android:focusable="false">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvFavoriteHabitsVertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="vertical"
+                        android:nestedScrollingEnabled="true" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- See All Habits Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSeeAllHabits"
+                    style="@style/Strive.Button.Outlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_md"
+                    android:text="See all habits" />
+
+                <!-- (Mood Card moved below favorites) -->
+
+            </LinearLayout>
+
+            <!-- Motivation Banner (moved below See all habits) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardMotivationBanner"
+                style="@style/Strive.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/card_padding"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tvMotivationEmoji"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💪"
+                        android:textSize="36sp"
+                        android:layout_marginEnd="@dimen/spacing_lg" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        
+
+                        <TextView
+                            android:id="@+id/tvMotivationQuote"
+                            style="@style/Strive.Text.Title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Small steps every day add up." />
+
+                        
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Latest Mood Banner -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardLatestMood"
+                style="@style/Strive.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvMoodBannerTitle"
+                                style="@style/Strive.Text.Subtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mood_banner_title" />
+
+                            <TextView
+                                android:id="@+id/tvMoodTimestamp"
+                                style="@style/Strive.Text.Caption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/mood_banner_empty_cta" />
+
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnAddMood"
+                            style="@style/Strive.Button.Outlined"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add_mood"
+                            android:textSize="14sp"
+                            app:icon="@drawable/ic_add"
+                            app:iconGravity="textStart"
+                            app:iconPadding="8dp"
+                            app:cornerRadius="20dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/spacing_md"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvMoodEmoji"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🙂"
+                            android:textSize="42sp"
+                            android:layout_marginEnd="@dimen/spacing_md" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvMoodLabel"
+                                style="@style/Strive.Text.Body"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mood_banner_empty_status"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvMoodBannerMessage"
+                                style="@style/Strive.Text.Body"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/mood_banner_empty_message" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Removed Today's Habits & Upcoming Reminders sections as requested -->
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        style="@style/Strive.BottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_nav_height"
+        android:layout_gravity="bottom"
+        app:menu="@menu/menu_bottom_nav" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
