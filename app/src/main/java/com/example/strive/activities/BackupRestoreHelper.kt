@@ -1,7 +1,10 @@
 package com.example.strive.activities
 
 import android.app.Activity
-import android.content.Intent
+import android.content.In        // HABIT rows
+        repo.getAllHabits().forEach { h ->
+            w.appendLine("HABIT,${h.id},${h.title},${h.emoji},${h.targetPerDay},${h.unit},${h.isBuiltIn},${h.color},${h.isStarred}")
+        }t
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import com.example.strive.repo.StriveRepository
@@ -180,6 +183,8 @@ object BackupRestoreHelper {
                     val target = parts.getOrNull(4)?.toIntOrNull() ?: 0
                     val unit = parts.getOrNull(5) ?: ""
                     val builtIn = parts.getOrNull(6)?.toBooleanStrictOrNull() ?: false
+                    val color = parts.getOrNull(7) ?: "#2196F3" // Default blue color for backward compatibility
+                    val starred = parts.getOrNull(8)?.toBooleanStrictOrNull() ?: false // Default not starred
                     val existing = habits.indexOfFirst { it.id == id }
                     val h = com.example.strive.models.Habit(
                         id = id,
@@ -188,7 +193,9 @@ object BackupRestoreHelper {
                         unit = unit,
                         targetPerDay = target,
                         defaultIncrement = 1,
-                        isBuiltIn = builtIn
+                        isBuiltIn = builtIn,
+                        color = color,
+                        isStarred = starred
                     )
                     if (existing >= 0) habits[existing] = h else habits.add(h)
                 }

@@ -34,12 +34,13 @@
 
             <TextView
                 android:id="@+id/tvAvatarEmoji"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:gravity="center"
                 android:text="😃"
-                android:textSize="@dimen/emoji_text_size"
+                android:textSize="48sp"
                 android:background="@drawable/bg_bottom_nav"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="@dimen/spacing_lg" />
 
             <!-- Emoji Input Field -->
@@ -56,10 +57,12 @@
                     android:id="@+id/etEmojiInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:maxLength="1"
+                    android:inputType="textShortMessage"
+                    android:maxLength="2"
                     android:text="😃"
-                    android:textSize="24sp" />
+                    android:textSize="32sp"
+                    android:gravity="center"
+                    android:imeOptions="actionDone" />
 
             </com.google.android.material.textfield.TextInputLayout>
 

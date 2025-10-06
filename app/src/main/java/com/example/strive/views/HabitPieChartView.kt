@@ -150,7 +150,9 @@ class HabitPieChartView @JvmOverloads constructor(
         canvas.drawCircle(centerX, centerY, innerRadius, paint)
         
         // Draw overall percentage in center
-        textPaint.textSize = centerTextSize
+        textPaint.color = Color.BLACK
+        textPaint.textSize = centerTextSize * 1.2f
+        textPaint.typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
         val percentText = "${overallPercentage.toInt()}%"
         val textBounds = Rect()
         textPaint.getTextBounds(percentText, 0, percentText.length, textBounds)
@@ -164,13 +166,17 @@ class HabitPieChartView @JvmOverloads constructor(
         // Draw "Today" label below percentage
         textPaint.textSize = legendTextSize * 0.7f
         textPaint.color = Color.GRAY
+        textPaint.typeface = Typeface.create(Typeface.DEFAULT, Typeface.NORMAL)
         canvas.drawText(
             "Today",
             centerX,
             centerY + textBounds.height() / 2 + legendTextSize,
             textPaint
         )
+        
+        // Reset text paint color
         textPaint.color = Color.BLACK
+        textPaint.typeface = Typeface.create(Typeface.DEFAULT, Typeface.NORMAL)
         
         // Draw legend on the right side
         drawLegend(canvas, pieWidth, height, totalTarget)
